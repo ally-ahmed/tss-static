@@ -128,3 +128,31 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# vercel
+.vercel/
+
+# typescript
+*.tsbuildinfo
+
+# idea files
+.idea
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+# database
+/prisma/db.sqlite
+/prisma/db.sqlite-journal
+db.sqlite
+
+#tanstack-start
+.vinxi/
+
+# testing
+/coverage
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
