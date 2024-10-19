@@ -5,6 +5,8 @@ import * as React from "react";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
 import { ThemeProvider } from "@/components/theme";
+import fontInter from "@fontsource-variable/inter?url";
+import "@fontsource-variable/inter";
 
 export const Route = createRootRoute({
   meta: () => [
@@ -19,7 +21,10 @@ export const Route = createRootRoute({
       title: "TanStack Start Starter",
     },
   ],
-  links: () => [{ rel: "stylesheet", href: appCss }],
+  links: () => [
+    { rel: "stylesheet", href: fontInter },
+    { rel: "stylesheet", href: appCss },
+  ],
   component: RootComponent,
 });
 
