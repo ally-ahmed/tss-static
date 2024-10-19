@@ -4,6 +4,7 @@ import { Body, Head, Html, Meta, Scripts } from "@tanstack/start";
 import * as React from "react";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
+import { ThemeProvider } from "@/components/theme";
 
 export const Route = createRootRoute({
   meta: () => [
@@ -37,7 +38,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Meta />
       </Head>
       <Body>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
       </Body>
