@@ -26,7 +26,8 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./app/*"]
+      "@/*": ["./app/*"],
+      "content-collections": ["./.content-collections/generated"]
     },
     "types": ["vite/client"]
   },

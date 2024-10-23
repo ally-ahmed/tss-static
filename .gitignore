@@ -156,3 +156,6 @@ db.sqlite
 /blob-report/
 /playwright/.cache/
 
+
+# Content Collections
+.content-collections

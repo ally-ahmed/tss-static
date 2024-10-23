@@ -1,12 +1,15 @@
-import { createRootRoute } from "@tanstack/react-router";
-import { Outlet, ScrollRestoration } from "@tanstack/react-router";
-import { Body, Head, Html, Meta, Scripts } from "@tanstack/start";
-import * as React from "react";
+import { ThemeProvider } from "@/components/theme";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
-import { ThemeProvider } from "@/components/theme";
-import fontInter from "@fontsource-variable/inter?url";
 import "@fontsource-variable/inter";
+import fontInter from "@fontsource-variable/inter?url";
+import {
+  createRootRoute,
+  Outlet,
+  ScrollRestoration,
+} from "@tanstack/react-router";
+import { Body, Head, Html, Meta, Scripts } from "@tanstack/start";
+import * as React from "react";
 
 export const Route = createRootRoute({
   meta: () => [
