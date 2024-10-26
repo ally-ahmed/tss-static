@@ -3,7 +3,7 @@ import {
   MoonIcon as Moon,
   SunIcon as Sun,
 } from "@radix-ui/react-icons";
-import { ThemeProvider, useTheme } from "next-themes";
+import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -12,9 +12,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useMounted } from "@/hooks/useMounted";
 
-const ThemeToggle = () => {
+export const ThemeToggle = () => {
   const { setTheme } = useTheme();
+  const mounted = useMounted();
+  if (!mounted) return null;
 
   return (
     <DropdownMenu>
@@ -42,5 +45,3 @@ const ThemeToggle = () => {
     </DropdownMenu>
   );
 };
-
-export { ThemeProvider, ThemeToggle };

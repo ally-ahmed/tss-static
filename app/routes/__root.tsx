@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/components/theme";
+import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
 import "@fontsource-variable/inter";

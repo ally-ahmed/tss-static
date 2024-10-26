@@ -1,4 +1,4 @@
-import { ThemeToggle } from "@/components/theme";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { createFileRoute } from "@tanstack/react-router";
 import { allPosts } from "content-collections";
