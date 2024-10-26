@@ -18,16 +18,19 @@ import { Route as BlogSlugImport } from './routes/blog/$slug'
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
+  id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
 } as any)
 
 const BlogIndexRoute = BlogIndexImport.update({
+  id: '/blog/',
   path: '/blog/',
   getParentRoute: () => rootRoute,
 } as any)
 
 const BlogSlugRoute = BlogSlugImport.update({
+  id: '/blog/$slug',
   path: '/blog/$slug',
   getParentRoute: () => rootRoute,
 } as any)
