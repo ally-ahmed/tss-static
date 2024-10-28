@@ -1,8 +1,11 @@
 import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
 import "@fontsource-variable/inter";
+import "@fontsource-variable/bricolage-grotesque";
 import fontInter from "@fontsource-variable/inter?url";
+import fontHeading from "@fontsource-variable/bricolage-grotesque?url";
 import {
   createRootRoute,
   Outlet,
@@ -26,6 +29,7 @@ export const Route = createRootRoute({
   ],
   links: () => [
     { rel: "stylesheet", href: fontInter },
+    { rel: "stylesheet", href: fontHeading },
     { rel: "stylesheet", href: appCss },
   ],
   component: RootComponent,
@@ -45,7 +49,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <Head>
         <Meta />
       </Head>
-      <Body>
+      <Body className="min-h-screen bg-background font-sans antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
