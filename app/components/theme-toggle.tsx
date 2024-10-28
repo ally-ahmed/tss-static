@@ -12,12 +12,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useMounted } from "@/hooks/useMounted";
+// import { useMounted } from "@/hooks/useMounted";
 
 export const ThemeToggle = () => {
   const { setTheme } = useTheme();
-  const mounted = useMounted();
-  if (!mounted) return null;
+  // const mounted = useMounted();
+  // if (!mounted) return null;
 
   return (
     <DropdownMenu>
