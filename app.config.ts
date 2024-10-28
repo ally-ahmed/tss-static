@@ -1,6 +1,7 @@
 import { defineConfig } from "@tanstack/start/config";
 import viteTsConfigPaths from "vite-tsconfig-paths";
 import contentCollections from "@content-collections/vite";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
   server: {
@@ -17,6 +18,9 @@ export default defineConfig({
         projects: ["./tsconfig.json"],
       }),
       contentCollections(),
+      ViteImageOptimizer({
+        /* pass your config */
+      }),
     ],
   },
 });
