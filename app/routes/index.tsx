@@ -28,6 +28,11 @@ function Home() {
           </li>
         ))}
       </ul>
+      <img
+        className="w-[500px] h-[500px]"
+        src="/images/image-01.jpg"
+        alt="image-01"
+      />
     </div>
   );
 }
