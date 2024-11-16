@@ -5,10 +5,10 @@ import contentCollections from "@content-collections/vite";
 export default defineConfig({
   server: {
     preset: "cloudflare-pages",
-    prerender: {
-      routes: ["/"],
-      crawlLinks: true,
-    },
+    // prerender: {
+    //   routes: ["/"],
+    //   crawlLinks: true,
+    // },
   },
   vite: {
     plugins: [
@@ -18,6 +18,9 @@ export default defineConfig({
       }),
       contentCollections(),
     ],
+    ssr: {
+      external: ["@vercel/og"],
+    },
   },
   react: {
     babel: {

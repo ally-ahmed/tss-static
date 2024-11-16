@@ -1,9 +1,8 @@
-import { json } from "@tanstack/start";
 import { createAPIFileRoute } from "@tanstack/start/api";
 import { ImageResponse } from "@vercel/og";
 
 export const Route = createAPIFileRoute("/api/og")({
-  GET: ({ request, params }) => {
+  GET: ({ request }) => {
     const url = new URL(request.url);
     const heading = url.searchParams.get("heading");
 
@@ -28,7 +27,7 @@ export const Route = createAPIFileRoute("/api/og")({
       {
         width: 1200,
         height: 630,
-      },
+      }
     );
   },
 });

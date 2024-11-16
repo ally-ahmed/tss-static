@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@cloudflare/pages-plugin-vercel-og':
+    specifier: ^0.1.2
+    version: 0.1.2
   '@fontsource-variable/bricolage-grotesque':
     specifier: ^5.1.0
     version: 5.1.0
@@ -415,6 +418,10 @@ packages:
     engines: {node: '>=16.13'}
     dependencies:
       mime: 3.0.0
+    dev: false
+
+  /@cloudflare/pages-plugin-vercel-og@0.1.2:
+    resolution: {integrity: sha512-aWA2pHu1R2UbOJIcSASCuViyYVEhYkZ3tWTrTnr+yLosBfksOzjecHQkCkPv/jy75hGPrn1BbtsQR+oWVFkp1g==}
     dev: false
 
   /@content-collections/cli@0.1.6(@content-collections/core@0.7.3):
