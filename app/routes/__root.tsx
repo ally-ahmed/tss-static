@@ -1,17 +1,16 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
-import "@fontsource-variable/inter";
 import "@fontsource-variable/bricolage-grotesque";
-import fontInter from "@fontsource-variable/inter?url";
 import fontHeading from "@fontsource-variable/bricolage-grotesque?url";
+import "@fontsource-variable/inter";
+import fontInter from "@fontsource-variable/inter?url";
 import {
   createRootRoute,
   Outlet,
   ScrollRestoration,
 } from "@tanstack/react-router";
-import { Body, Head, Html, Meta, Scripts } from "@tanstack/start";
+import { Meta, Scripts } from "@tanstack/start";
 import * as React from "react";
 
 export const Route = createRootRoute({
@@ -45,22 +44,22 @@ function RootComponent() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <Html>
-      <Head>
+    <html>
+      <head>
         <Meta />
-      </Head>
-      <Body className="min-h-screen bg-background font-sans antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      </head>
+      <body className="min-h-screen bg-background font-sans antialiased">
+        {/* <ThemeProvider */}
+        {/*   attribute="class" */}
+        {/*   defaultTheme="system" */}
+        {/*   enableSystem */}
+        {/*   disableTransitionOnChange */}
+        {/* > */}
+        {children}
+        {/* </ThemeProvider> */}
         <ScrollRestoration />
         <Scripts />
-      </Body>
-    </Html>
+      </body>
+    </html>
   );
 }
