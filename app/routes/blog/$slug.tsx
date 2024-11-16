@@ -20,7 +20,6 @@ export const Route = createFileRoute("/blog/$slug")({
     const url = import.meta.env.VITE_APP_BASE_URL;
     const ogUrl = new URL(`${"http://localhost:3000"}/api/og`);
     ogUrl.searchParams.set("heading", loaderData.title);
-    console.log(ogUrl.toString());
     return seo({ title: loaderData.title, image: ogUrl.toString() });
   },
   links: () => [{ rel: "stylesheet", href: mdxCss }],

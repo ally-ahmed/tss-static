@@ -1,7 +1,6 @@
 import { json } from "@tanstack/start";
 import { createAPIFileRoute } from "@tanstack/start/api";
 import { ImageResponse } from "@vercel/og";
-import { OG } from "@/components/og";
 
 export const Route = createAPIFileRoute("/api/og")({
   GET: ({ request, params }) => {
