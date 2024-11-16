@@ -3,8 +3,26 @@ import { createFileRoute, redirect, useParams } from "@tanstack/react-router";
 import { allPosts } from "content-collections";
 import "@/styles/mdx.css";
 import mdxCss from "@/styles/mdx.css?url";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
+  loader: async ({ params }) => {
+    const slug = params.slug;
+    const post = allPosts.find((post) => post._meta.path === slug);
+    if (!post) {
+      throw redirect({
+        to: "/blog",
+      });
+    }
+    return post;
+  },
+  meta: ({ loaderData }) => {
+    const url = import.meta.env.VITE_APP_BASE_URL;
+    const ogUrl = new URL(`${"http://localhost:3000"}/api/og`);
+    ogUrl.searchParams.set("heading", loaderData.title);
+    console.log(ogUrl.toString());
+    return seo({ title: loaderData.title, image: ogUrl.toString() });
+  },
   links: () => [{ rel: "stylesheet", href: mdxCss }],
   component: Post,
 });
