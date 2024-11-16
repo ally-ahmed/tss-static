@@ -1,9 +1,9 @@
+import { useTheme } from "next-themes";
 import {
   LaptopIcon as Laptop,
   MoonIcon as Moon,
   SunIcon as Sun,
 } from "@radix-ui/react-icons";
-import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -12,7 +12,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-// import { useMounted } from "@/hooks/useMounted";
+import { useMounted } from "@/hooks/useMounted";
 
 export const ThemeToggle = () => {
   const { setTheme } = useTheme();

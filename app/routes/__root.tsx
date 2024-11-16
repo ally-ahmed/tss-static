@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "next-themes";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
 import "@fontsource-variable/bricolage-grotesque";
@@ -44,19 +44,19 @@ function RootComponent() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        {/* <ThemeProvider */}
-        {/*   attribute="class" */}
-        {/*   defaultTheme="system" */}
-        {/*   enableSystem */}
-        {/*   disableTransitionOnChange */}
-        {/* > */}
-        {children}
-        {/* </ThemeProvider> */}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
