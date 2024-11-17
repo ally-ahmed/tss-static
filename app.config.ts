@@ -1,6 +1,7 @@
 import { defineConfig } from "@tanstack/start/config";
 import viteTsConfigPaths from "vite-tsconfig-paths";
 import contentCollections from "@content-collections/vite";
+import wasmModuleWorkers from "vite-plugin-wasm-module-workers";
 
 export default defineConfig({
   server: {
@@ -12,6 +13,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      wasmModuleWorkers(),
       // this is the plugin that enables path aliases
       viteTsConfigPaths({
         projects: ["./tsconfig.json"],
@@ -19,7 +21,11 @@ export default defineConfig({
       contentCollections(),
     ],
     ssr: {
-      external: ["@vercel/og"],
+      external: [
+        "workers-og",
+        "@vercel/og",
+        "@cloudflare/pages-plugin-vercel-og",
+      ],
     },
   },
   react: {

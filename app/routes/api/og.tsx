@@ -27,7 +27,7 @@ export const Route = createAPIFileRoute("/api/og")({
       {
         width: 1200,
         height: 630,
-      }
+      },
     );
   },
 });
