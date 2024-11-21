@@ -18,7 +18,7 @@ export const Route = createFileRoute("/blog/$slug")({
   },
   meta: ({ loaderData }) => {
     const url = import.meta.env.VITE_APP_BASE_URL;
-    const ogUrl = new URL(`${"http://localhost:3000"}/api/og`);
+    const ogUrl = new URL(`${url}/api/og`);
     ogUrl.searchParams.set("heading", loaderData.title);
     return seo({ title: loaderData.title, image: ogUrl.toString() });
   },
