@@ -4,11 +4,10 @@ import viteTsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   server: {
-    preset: "cloudflare-pages",
-    // prerender: {
-    //   routes: ["/"],
-    //   crawlLinks: true,
-    // },
+    prerender: {
+      routes: ["/"],
+      crawlLinks: true,
+    },
   },
   vite: {
     plugins: [
@@ -18,15 +17,6 @@ export default defineConfig({
       }),
       contentCollections(),
     ],
-    ssr: {
-      external: [
-        "workers-og",
-        "@vercel/og",
-        "@cloudflare/pages-plugin-vercel-og",
-        "yoga-wasm-web",
-        "satori",
-      ],
-    },
   },
   react: {
     babel: {
