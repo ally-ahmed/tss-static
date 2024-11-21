@@ -12,5 +12,3 @@ Static rendering of Tanstack start test.
 #### Fix
 
 - font flicker on hard refresh
-
-Trigger
