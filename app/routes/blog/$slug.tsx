@@ -21,7 +21,11 @@ export const Route = createFileRoute("/blog/$slug")({
     const url = getBaseUrl();
     const ogUrl = new URL(`${url}/api/og`);
     ogUrl.searchParams.set("heading", loaderData.title);
-    return seo({ title: loaderData.title, image: ogUrl.toString() });
+    return seo({
+      title: loaderData.title,
+      description: loaderData.title,
+      image: ogUrl.toString(),
+    });
   },
   links: () => [{ rel: "stylesheet", href: mdxCss }],
   component: Post,
