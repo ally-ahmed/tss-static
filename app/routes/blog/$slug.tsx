@@ -4,6 +4,7 @@ import { allPosts } from "content-collections";
 import "@/styles/mdx.css";
 import mdxCss from "@/styles/mdx.css?url";
 import { seo } from "@/lib/seo";
+import { getBaseUrl } from "@/lib/utils";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: async ({ params }) => {
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/blog/$slug")({
     return post;
   },
   meta: ({ loaderData }) => {
-    const url = import.meta.env.VITE_APP_BASE_URL;
+    const url = getBaseUrl();
     const ogUrl = new URL(`${url}/api/og`);
     ogUrl.searchParams.set("heading", loaderData.title);
     return seo({ title: loaderData.title, image: ogUrl.toString() });
