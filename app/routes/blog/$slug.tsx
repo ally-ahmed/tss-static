@@ -17,17 +17,19 @@ export const Route = createFileRoute("/blog/$slug")({
     }
     return post;
   },
-  meta: ({ loaderData }) => {
+  head: ({ loaderData }) => {
     // const url = getBaseUrl();
     // const ogUrl = new URL(`${url}/api/og`);
     // ogUrl.searchParams.set("heading", loaderData.title);
-    return seo({
-      title: loaderData.title,
-      description: loaderData.title,
-      // image: ogUrl.toString(),
-    });
+    return {
+      meta: seo({
+        title: loaderData?.title ?? "",
+        description: loaderData?.title,
+        // image: ogUrl.toString(),
+      }),
+      links: [{ rel: "stylesheet", href: mdxCss }],
+    };
   },
-  links: () => [{ rel: "stylesheet", href: mdxCss }],
   component: Post,
 });
 
