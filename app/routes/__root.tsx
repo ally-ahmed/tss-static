@@ -1,4 +1,4 @@
-import { ThemeProvider } from "next-themes";
+// import { ThemeProvider } from "next-themes";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
 import "@fontsource-variable/bricolage-grotesque";
@@ -23,7 +23,7 @@ export const Route = createRootRoute({
       content: "width=device-width, initial-scale=1",
     },
     {
-      title: "TanStack Start Static",
+      title: "TanStack Start Starter",
     },
   ],
   links: () => [
@@ -49,14 +49,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {/* <ThemeProvider */}
+        {/*   attribute="class" */}
+        {/*   defaultTheme="system" */}
+        {/*   enableSystem */}
+        {/*   disableTransitionOnChange */}
+        {/* > */}
+        {children}
+        {/* </ThemeProvider> */}
         <ScrollRestoration />
         <Scripts />
       </body>

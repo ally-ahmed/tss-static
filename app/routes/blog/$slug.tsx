@@ -18,13 +18,13 @@ export const Route = createFileRoute("/blog/$slug")({
     return post;
   },
   meta: ({ loaderData }) => {
-    const url = getBaseUrl();
-    const ogUrl = new URL(`${url}/api/og`);
-    ogUrl.searchParams.set("heading", loaderData.title);
+    // const url = getBaseUrl();
+    // const ogUrl = new URL(`${url}/api/og`);
+    // ogUrl.searchParams.set("heading", loaderData.title);
     return seo({
       title: loaderData.title,
       description: loaderData.title,
-      image: ogUrl.toString(),
+      // image: ogUrl.toString(),
     });
   },
   links: () => [{ rel: "stylesheet", href: mdxCss }],
