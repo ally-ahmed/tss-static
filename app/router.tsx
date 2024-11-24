@@ -6,7 +6,6 @@ import { routeTree } from "./routeTree.gen";
 export function createRouter() {
   const router = createTanStackRouter({
     routeTree,
-    defaultSsr: false,
     defaultErrorComponent: DefaultCatchBoundary,
     defaultNotFoundComponent: () => <NotFound />,
   });
