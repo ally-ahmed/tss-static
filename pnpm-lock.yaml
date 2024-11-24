@@ -53,6 +53,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.15)
+  unenv:
+    specifier: ^1.10.0
+    version: 1.10.0
   vinxi:
     specifier: ^0.4.3
     version: 0.4.3(@types/node@22.9.3)(typescript@5.7.2)

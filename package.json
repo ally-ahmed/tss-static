@@ -26,6 +26,7 @@
     "react-dom": "19.0.0-rc-b01722d5-20241114",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
+    "unenv": "^1.10.0",
     "vinxi": "^0.4.3"
   },
   "devDependencies": {

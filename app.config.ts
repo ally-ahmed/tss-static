@@ -1,10 +1,12 @@
 import contentCollections from "@content-collections/vite";
 import { defineConfig } from "@tanstack/start/config";
 import viteTsConfigPaths from "vite-tsconfig-paths";
+import { cloudflare } from "unenv";
 
 export default defineConfig({
   server: {
     preset: "cloudflare-pages",
+    unenv: cloudflare,
     prerender: {
       routes: ["/"],
       crawlLinks: true,
