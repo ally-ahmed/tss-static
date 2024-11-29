@@ -1,14 +1,15 @@
-## tss-static
+# tss-static
 
 Static rendering of Tanstack start test.
 
-#### TODO
+## TODO
 
 - add rehype and remark plugins, typography and custom components
 - check to see if the pages are being statically rendered
 - add tanstack router dev tool
 - add framer motion and see how that behaves
+- beginner
 
-#### Fix
+## Fix
 
 - font flicker on hard refresh

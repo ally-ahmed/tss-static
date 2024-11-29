@@ -7,7 +7,6 @@ import { Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   component: Home,
 });
-
 function Home() {
   return (
     <div className="flex flex-col items-center justify-center gap-6 py-6">
