@@ -5,7 +5,7 @@ import { cloudflare } from "unenv";
 
 export default defineConfig({
   server: {
-    preset: "cloudflare-pages",
+    preset: "cloudflare-pages-static",
     unenv: cloudflare,
     prerender: {
       routes: ["/"],
