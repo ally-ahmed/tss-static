@@ -7,11 +7,11 @@ export default defineConfig({
   server: {
     preset: "vercel",
     // unenv: cloudflare,
-    prerender: {
-      routes: ["/"],
-      crawlLinks: true,
-      ignore: ["/api"],
-    },
+    // prerender: {
+    //   routes: ["/"],
+    //   crawlLinks: true,
+    //   ignore: ["/api"],
+    // },
   },
   vite: {
     plugins: [
