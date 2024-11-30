@@ -5,13 +5,13 @@ import { cloudflare } from "unenv";
 
 export default defineConfig({
   server: {
-    preset: "cloudflare-pages-static",
-    unenv: cloudflare,
-    prerender: {
-      routes: ["/"],
-      crawlLinks: true,
-      ignore: ["/api"],
-    },
+    preset: "vercel",
+    // unenv: cloudflare,
+    // prerender: {
+    //   routes: ["/"],
+    //   crawlLinks: true,
+    //   ignore: ["/api"],
+    // },
   },
   vite: {
     plugins: [
