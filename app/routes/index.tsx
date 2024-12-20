@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { createFileRoute } from "@tanstack/react-router";
-import { allPosts } from "content-collections";
+// import { allPosts } from "content-collections";
 import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -14,17 +14,17 @@ function Home() {
       <h1>
         <Link to="/blog">Blog</Link>
       </h1>
-      <ul>
-        {allPosts.map((post) => (
-          <li key={post._meta.path}>
-            <h3>
-              <Link to="/blog/$slug" params={{ slug: post._meta.path }}>
-                {post.title}
-              </Link>
-            </h3>
-          </li>
-        ))}
-      </ul>
+      {/* <ul> */}
+      {/*   {allPosts.map((post) => ( */}
+      {/*     <li key={post._meta.path}> */}
+      {/*       <h3> */}
+      {/*         <Link to="/blog/$slug" params={{ slug: post._meta.path }}> */}
+      {/*           {post.title} */}
+      {/*         </Link> */}
+      {/*       </h3> */}
+      {/*     </li> */}
+      {/*   ))} */}
+      {/* </ul> */}
     </div>
   );
 }
