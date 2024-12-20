@@ -1,4 +1,3 @@
-// import { ThemeProvider } from "next-themes";
 import "@/styles/globals.css";
 import appCss from "@/styles/globals.css?url";
 import "@fontsource-variable/bricolage-grotesque";
@@ -44,14 +43,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        {/* <ThemeProvider */}
-        {/*   attribute="class" */}
-        {/*   defaultTheme="system" */}
-        {/*   enableSystem */}
-        {/*   disableTransitionOnChange */}
-        {/* > */}
         {children}
-        {/* </ThemeProvider> */}
         <ScrollRestoration />
         <Scripts />
       </body>

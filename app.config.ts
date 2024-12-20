@@ -5,8 +5,8 @@ import { cloudflare } from "unenv";
 
 export default defineConfig({
   server: {
-    preset: "vercel",
-    // unenv: cloudflare,
+    preset: "cloudflare-pages",
+    unenv: cloudflare,
     // prerender: {
     //   routes: ["/"],
     //   crawlLinks: true,
